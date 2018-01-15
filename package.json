@@ -1,0 +1,22 @@
+{
+  "name": "mongol",
+  "version": "1.0.0",
+  "description": "Wrapper for node.js MongoDB Driver",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "mongodb",
+    "mongol",
+    "driver",
+    "wrapper",
+    "database"
+  ],
+  "author": "MrMashy",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "~3.0.0-rc0",
+    "bluebird": "~3.5.1"
+  }
+}
