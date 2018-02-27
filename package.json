@@ -1,7 +1,7 @@
 {
-  "name": "mongol",
+  "name": "mongool",
   "version": "1.0.0",
-  "description": "Wrapper for node.js MongoDB Driver",
+  "description": "API Library Wrapper for node.js MongoDB Driver",
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js"
@@ -16,7 +16,9 @@
   "author": "MrMashy",
   "license": "MIT",
   "dependencies": {
-    "mongodb": "~3.0.0-rc0",
-    "bluebird": "~3.5.1"
+    "bluebird": "~3.5.1",
+    "clone-deep": "3.0.1",
+    "is-ip": "^2.0.0",
+    "mongodb": "~3.0.0-rc0"
   }
 }
