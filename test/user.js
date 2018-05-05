@@ -50,7 +50,8 @@ module.exports = new Model({
                     type: "string"
                 },
                 "nationality": {
-                    type: ["string"]
+                    type: "string",
+                    array: true
                 },
                 "height": {
                     type: "string"
