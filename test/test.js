@@ -1,22 +1,43 @@
-'use strict'
+var assert = require('assert');
+var User = require('./User')
+var Mongool = require('../index')
+const { PerformanceObserver, performance } = require('perf_hooks');
 
-var Bluebird = require('bluebird')
-var User = require('./user')
+//TODO: Implement proper tests
 
-var user = new User({
-    name: "1",
-    security: {
-        password: "hash",
-    },
-    username: 'mrmashyx',
-    pertus: [{age: 1}, {}]
-})
+describe('Model',function(){
+    User.connection = Mongool.connect()
 
-user.validate().then(function(validator){
-    if(validator.fails()){
-        console.log(validator.errors())
-    }else{
-        user.save().then(x => user.get()).then(document => console.log(document))
-        user.remove()
-    }
+    var currentuser = new User({
+        username: "HelloWorld",
+        password: "123456", 
+        nationalities: ["australias"]
+    })
+
+    it('should create a model', function(){
+        if(currentuser instanceof User){
+            return true
+        }
+    })
+
+    
+    it('should connect', async function(){
+        await User.CollectionConnection()
+        return true
+    })
+
+    it('should validate', async function(){
+        await currentuser.validate()
+        return true
+    })
+
+    it('should save', async function(){
+        await currentuser.save()
+        return true
+    })
+
+    it('should remove', async function(){
+        await currentuser.remove()
+        return true
+    })
 })
