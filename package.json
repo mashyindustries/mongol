@@ -1,6 +1,6 @@
 {
   "name": "mongool",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "API Library Wrapper for node.js MongoDB Driver",
   "main": "index.js",
   "scripts": {
