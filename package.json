@@ -19,8 +19,7 @@
   "dependencies": {
     "bluebird": "~3.5.1",
     "clone-deep": "3.0.1",
-    "mongodb": "^3.0.7",
-    "npm": "^6.1.0"
+    "mongodb": "^3.0.7"
   },
   "devDependencies": {
     "mocha": "^5.1.1",
